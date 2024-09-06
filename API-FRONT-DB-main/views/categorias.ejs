@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Categorias</title>
+    <link rel="stylesheet" href="/css/index.css">
+ </head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/carros">Home</a></li>
+            <li><a href="/carros/new">Cadastrar carro</a></li>
+            <li><a href="/categorias/">Categorias</a></li>
+        </ul>
+    </nav>
+    <h1>Lista de Categorias</h1>
+    <a href="/categorias/new">Adicionar Nova Categoria</a> <!-- Link para o formulário de nova categoria -->
+    <ul>
+        <% categories.forEach(category => { %>
+            <li><%= category.nome %></li>
+        <% }); %>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Carros</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+        <nav>
+        <ul>
+            <li><a href="/carros">Home</a></li>
+            <li><a href="/carros/new">Cadastrar carro</a></li>
+            <li><a href="/categorias/">Categorias</a></li>
+        </ul>
+    </nav>
+    <h1>Lista de Carros</h1>
+    <ul>
+        <% if (data.length > 0) { %>
+            <% data.forEach(function(carro) { %>
+                <li><%= carro.nome %> - <%= carro.cor %> - <%= carro.modelo %> - <%= carro.ano %></li>
+            <% }) %>
+        <% } else { %>
+            <li>Nenhum carro cadastrado.</li>
+        <% } %>
+    </ul>
+</body>
+</html>

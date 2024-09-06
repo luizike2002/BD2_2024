@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Carro</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/carros">Home</a></li>
+            <li><a href="/carros/new">Cadastrar carro</a></li>
+            <li><a href="/categorias/">Categorias</a></li>
+        </ul>
+    </nav>
+    <h1>Cadastrar Carro</h1>
+    <form action="/carros" method="POST">
+        <div>
+            <label for="nome">Nome do Carro:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div>
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" required>
+        </div>
+        <div>
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+        </div>
+        <div>
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" required>
+        </div>
+        <div>
+            <label for="categoriaId">Categoria:</label>
+            <select id="categoriaId" name="categoriaId" required>
+                <% categories.forEach(function(category) { %>
+                    <option value="<%= category.id %>">
+                        <%= category.nome %>
+                    </option>
+                    <% }) %>
+            </select>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+
+</html>

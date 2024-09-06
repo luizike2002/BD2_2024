@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Nova Categoria</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/carros">Home</a></li>
+            <li><a href="/carros/new">Cadastrar carro</a></li>
+            <li><a href="/categorias/">Categorias</a></li>
+        </ul>
+    </nav>
+    <h1>Criar Nova Categoria</h1>
+    <form action="/categorias" method="POST">
+        <label for="nome">Nome da Categoria:</label>
+        <input type="text" id="nome" name="nome" required>
+        <button type="submit">Criar Categoria</button>
+    </form>
+    <a href="/categorias">Voltar para a lista de categorias</a>
+</body>
+</html>
